@@ -6,7 +6,7 @@
 #    By: vdzhanaz <vdzhanaz@student.unit.ua>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/21 07:33:21 by vdzhanaz          #+#    #+#              #
-#    Updated: 2018/10/21 08:11:42 by vdzhanaz         ###   ########.fr        #
+#    Updated: 2018/10/26 01:56:58 by vdzhanaz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,11 +21,11 @@ LIB			:=	$(LIB_PATH)libft.a
 OBJ_PATH	:=	.obj/
 
 CC			:=	clang
-CFLAGS		:=	-g #-Wall -Werror -Wextra
+CFLAGS		:=	-Wall -Werror -Wextra
 IFLAGS		:=	-I $(INC_PATH) -I $(LIB_PATH)
 
 HFILES		:=	ft_printf
-FILES		:=	ft_printf
+FILES		:=	ft_printf ft_printf1 ft_printf2 ft_printf3
 LIB			:=	$(LIB_PATH)libft.a
 
 HDRS := $(addprefix $(INC_PATH), $(addsuffix .h, $(HFILES)))
@@ -60,7 +60,7 @@ mfclean:
 	rm -rf $(OBJ_PATH)
 mre: mfclean all
 
-test: all
-	$(CC) -o unittest.out $(IFLAGS) $(NAME) unittest.c
-	./unittest.out
-	rm -f unittest.out
+#test: all
+	#$(CC) -g -o unittest.out $(IFLAGS) $(NAME) unittest.c
+	#./unittest.out
+	# rm -f unittest.out
